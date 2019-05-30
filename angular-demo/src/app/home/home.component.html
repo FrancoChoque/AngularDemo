@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <p>Your time is {{ time }} </p>
+        </div>            
+        <div class="col-md-6">            
+            <select [(ngModel)]="selectedTimezone" (ngModelChange)="onTimezoneSelected()" >
+                <option selected disabled value="" >Select a country</option>
+                <option *ngFor="let timezone of timezones">{{ timezone }}</option>
+            </select>
+            <p>Time in {{ selectedTimezone }}</p>
+            <p> {{ requestedTime }}  </p>
+        </div>            
+    </div>    
+</div>
